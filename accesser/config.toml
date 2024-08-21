@@ -70,6 +70,8 @@ nameserver = [
 "www.google.com/recaptcha/" = "www.recaptcha.net/recaptcha/"
 "tumblr.com/" = "www.tumblr.com/"
 "instagram.com/" = "www.instagram.com/"
+"nicovideo.jp/" = "www.nicovideo.jp/"
+"twitch.tv/" = "www.twitch.tv/"
 
 
 [alter_hostname]
@@ -79,29 +81,9 @@ nameserver = [
 
 "www.quora.com" = "fs.quoracdn.net"
 "sketch.pixiv.net" = "pixivsketch.net"
-"cdn1-smallimg.phncdn.com" = "pabbp.com"
 "nyaa.si" = "ddos-guard.net"
-"site.nicovideo.jp" = "d4fsvsnk8os9s.cloudfront.net"
-"blog.nicovideo.jp" = "d11c2xcc0ucqv1.cloudfront.net"
-"info.nicovideo.jp" = "d2c1o7y4lmdvf6.cloudfront.net"
-"www.ftchinese.com" = "d21srv90rgy5em.cloudfront.net"
-"site.live.stage.nicovideo.jp" = "d1kbkmcy8xlds0.cloudfront.net"
-"anime.nicovideo.jp" = "d1m4g6tauw16ys.cloudfront.net"
-"site.live.nicovideo.jp" = "d15yc1ruklb1w6.cloudfront.net"
-"dcdn.cdn.nicovideo.jp" = "d2urq2sf7li1b4.cloudfront.net"
-"static.prod.blogaws.nicovideo.jp" = "d11c2xcc0ucqv1.cloudfront.net"
-"pipelines.actions.githubusercontent.com" = "origin.mediaservices.windows.net"
 "steamcommunity.com" = "www.valvesoftware.com"
-"docs.github.com" = "api.github.com"
-"pubsub-edge.twitch.tv" = "external-2.us-west-2.prod.twitchpubsubedge.twitch.a2z.com"
-"irc-ws.chat.twitch.tv" = "websocket-7.us-west-2.prod.twitchircedge.twitch.a2z.com"
-"vod-secure.twitch.tv" = "ds0h3roq6wcgc.cloudfront.net"
-"extension-files.twitch.tv" = "d36mepituis1gg.cloudfront.net"
-"panels.twitch.tv" = "d1ut6fykkt3imt.cloudfront.net"
-"extensions-discovery-images.twitch.tv" = "d3m1uefep57n8q.cloudfront.net"
-"downloads.scratch.mit.edu" = "d2as4384mnnkdz.cloudfront.net"
 "gn-web-assets.api.bbc.com" = "static-web-assets.gnl-common.bbcverticals.com"
-"onedrive.live.com" = "0.azureedge.net"
 
 
 [cert_verify]
@@ -111,10 +93,10 @@ nameserver = [
 # Set the certificate validation policy for domains individually. The values can be a array contain strings which represent the domain name used to verify the certificate (pass if there is a match), or false which means disabling the verification.
 # It has as a higher priority than [alter_hostname] and the global check_hostname, but will not be sent as server_name in Client Hello.
 
-"singlelogin.se" = ["1lib.fr", "singlelogin.se", "singlelogin.re"]
-"*.singlelogin.se" = ["1lib.fr", "singlelogin.se", "singlelogin.re"]
-"singlelogin.re" = ["1lib.fr", "singlelogin.se", "singlelogin.re"]
-"*.singlelogin.re" = ["1lib.fr", "singlelogin.se", "singlelogin.re"]
+"1lib.sk" = ["1lib.fr", "1lib.sk", "singlelogin.re"]
+"*.1lib.sk" = ["1lib.fr", "1lib.sk", "singlelogin.re"]
+"singlelogin.re" = ["1lib.fr", "1lib.sk", "singlelogin.re"]
+"*.singlelogin.re" = ["1lib.fr", "1lib.sk", "singlelogin.re"]
 "scratch.mit.edu" = ["scratchfoundation.map.fastly.net"]
 "*.scratch.mit.edu" = ["scratchfoundation.map.fastly.net"]
 "*.euronews.com" = ["fastly.com"]
@@ -122,6 +104,7 @@ nameserver = [
 "bandcamp.com" = ["fastly.com"]
 "*.bandcamp.com" = ["fastly.com"]
 "nytimes.com" = ["fastly.com"]
+"cn.nytimes.com" = ["cloudfront.com"]
 "*.nytimes.com" = ["fastly.com"]
 "reddit.com" = ["fastly.com"]
 "*.reddit.com" = ["fastly.com"]
@@ -134,6 +117,13 @@ nameserver = [
 "*.redditinc.com" = ["fastly.com"]
 "mastodon.social" = ["fastly.com"]
 "*.mastodon.social" = ["fastly.com"]
+"gql.twitch.tv" = ["fastly.com"]
+"pubsub-edge.twitch.tv" = ["external-2.us-west-2.prod.twitchpubsubedge.twitch.a2z.com"]
+"irc-ws.chat.twitch.tv" = ["websocket-7.us-west-2.prod.twitchircedge.twitch.a2z.com"]
+"*.twitch.tv" = ["twitch.tv", "cloudfront.net"]
+"nicovideo.jp" = ["cloudfront.net"]
+"qa.nicovideo.jp" = ["qa.nicovideo.jp"]
+"*.nicovideo.jp" = ["cloudfront.net"]
 
 
 [hosts]
@@ -149,25 +139,21 @@ nameserver = [
 "img-sketch.pixiv.net" = "210.140.131.145"
 "source.pixiv.net" = "210.140.131.153"
 ".pixiv.net" = "pixivision.net"
+"i.pximg.net" = "pximg.net"
 "www.bbc.co.uk" = "212.58.233.252"
 "count.wenxuecity.com" = "0.0.0.0"
 "adserver.wenxuecity.com" = "0.0.0.0"
 "www.dropbox.com" = "162.125.69.1"
 ".appledaily.com" = "60.254.170.127"
+"e-hentai.org" = "e-hentai.org.cdn.cloudflare.net"
 ".e-hentai.org" = "e-hentai.org.cdn.cloudflare.net"
-"info.nicovideo.jp" = "d2c1o7y4lmdvf6.cloudfront.net"
-"blog.nicovideo.jp" = "d11c2xcc0ucqv1.cloudfront.net"
-"site.nicovideo.jp" = "d4fsvsnk8os9s.cloudfront.net"
-"site.live.stage.nicovideo.jp" = "d1kbkmcy8xlds0.cloudfront.net"
-"anime.nicovideo.jp" = "d1m4g6tauw16ys.cloudfront.net"
-"site.live.nicovideo.jp" = "d15yc1ruklb1w6.cloudfront.net"
-"dcdn.cdn.nicovideo.jp" = "d2urq2sf7li1b4.cloudfront.net"
-"static.prod.blogaws.nicovideo.jp" = "d11c2xcc0ucqv1.cloudfront.net"
-"www.ftchinese.com" = "d21srv90rgy5em.cloudfront.net"
+"nicovideo.jp" = "futuregadget-lab.com"
+"qa.nicovideo.jp" = "124.146.170.109"
+".nicovideo.jp" = "futuregadget-lab.com"
 "bandcamp.com" = "fastly.com"
 ".bandcamp.com" = "fastly.com"
 "nytimes.com" = "fastly.com"
-"cn.nytimes.com" = "13.33.171.121"
+"cn.nytimes.com" = "futuregadget-lab.com"
 ".nytimes.com" = "fastly.com"
 "nyt.com" = "fastly.com"
 ".nyt.com" = "fastly.com"
@@ -208,6 +194,7 @@ nameserver = [
 ".wikidata.org" = "text-lb.esams.wikimedia.org"
 "wikimedia.org" = "text-lb.esams.wikimedia.org"
 "upload.wikimedia.org" = "upload-lb.esams.wikimedia.org"
+"maps.wikimedia.org" = "upload-lb.esams.wikimedia.org"
 ".wikimedia.org" = "text-lb.esams.wikimedia.org"
 "exhentai.org" = "178.175.128.252"
 "scratch.mit.edu" = "scratchfoundation.map.fastly.net"
@@ -215,5 +202,15 @@ nameserver = [
 "archive.org" = "207.241.224.27"
 "mastodon.social" = "fastly.com"
 "*.mastodon.social" = "fastly.com"
-"singlelogin.se" = "195.66.210.33"
-".singlelogin.se" = "195.66.210.33"
+"singlelogin.re" = "176.123.7.105"
+".singlelogin.re" = "176.123.7.105"
+"1lib.sk" = "176.123.7.105"
+".1lib.sk" = "176.123.7.105"
+"gql.twitch.tv" = "fastly.com"
+"assets.twitch.tv" = "futuregadget-lab.com"
+"vod-secure.twitch.tv" = "futuregadget-lab.com"
+"extension-files.twitch.tv" = "futuregadget-lab.com"
+"panels.twitch.tv" = "futuregadget-lab.com"
+"clips-media-assets2.twitch.tv" = "futuregadget-lab.com"
+"extensions-discovery-images.twitch.tv" = "futuregadget-lab.com"
+"passport.twitch.tv" = "futuregadget-lab.com"

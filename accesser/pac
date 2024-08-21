@@ -12,11 +12,9 @@ var domains = {
   "epochtimes.com": 1,
   "euronews.com": 1,
   "exhentai.org": 1,
-  "ftchinese.com": 1,
   "github.com": 1,
   "imgur.com": 1,
   "instagram.com": 1,
-  "i.pximg.net": 1,
   "kobo.com": 1,
   "mega.io": 1,
   "mega.nz": 1,
@@ -51,7 +49,7 @@ var domains = {
   "wikisource.org": 1,
   "wikidata.org": 1,
   "singlelogin.re": 1,
-  "singlelogin.se": 1,
+  "1lib.sk": 1,
   "archive.org": 1,
   "amazon.co.jp": 1,
   "discord.com": 1,
@@ -62,7 +60,8 @@ var domains = {
   "twitch.tv": 1,
   "scratch.mit.edu": 1,
   "bandcamp.com": 1,
-  "mastodon.social": 1
+  "mastodon.social": 1,
+  "hub.docker.com": 1
 };
 
 var shexps = {
@@ -73,7 +72,7 @@ var shexps = {
   "*://search.yahoo.co.jp/*": 1,
   "*://*.cna.com.tw/*": 1,
   "*://media.discordapp.net/*": 1,
-  "*://*.dmc.nico/*": 1,
+  "*://i.pximg.net/*": 1,
   "*://*.pixivsketch.net/*": 1,
   "*://*.githubassets.com/*": 1,
   "*://*.githubusercontent.com/*": 1,
