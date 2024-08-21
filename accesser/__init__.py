@@ -171,8 +171,13 @@ async def proxy():
 async def DNSquery(domain, hosts_only=False):
     global DNSresolver
     try:
-        return next(v for k,v in setting.config['hosts'].items() if k==domain or (k.startswith('.') and domain.endswith(k)))
-    except StopIteration:
+        # Check for exact match first
+        return setting.config['hosts'][domain]
+    except KeyError:
+        # Check for wildcard patterns
+        for pattern, ip in setting.config['hosts'].items():
+            if fnmatch.fnmatch(domain, pattern):
+                return ip
         if hosts_only:
             return
     if setting.config['ipv6']:
